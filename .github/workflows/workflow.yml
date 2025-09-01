@@ -19,4 +19,4 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Gradle
-        run: ./gradlew build -x test
+        run: JAVA_TOOL_OPTIONS="-Dhttp.proxyHost=192.168.2.69 -Dhttp.proxyPort=3128 -Dhttps.proxyHost=192.168.2.69 -Dhttps.proxyPort=3128" ./gradlew build -x test
