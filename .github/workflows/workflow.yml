@@ -17,6 +17,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Echo pwd
+        run: pwd
 
       - name: Build with Gradle
         run: ./gradlew build -x test --stacktrace
